@@ -1,5 +1,6 @@
 import { ActionTypes } from "../constants/action-types";
 
+
 const initialState = {
     budget: 12000,
     expenses: 0

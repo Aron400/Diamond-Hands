@@ -41,39 +41,30 @@ const Year = () => {
                 <h2>Yearly expenses: ${yearlyExpenses}</h2>
                 <h2><u>January</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
-                    <h3>Monthly expenses: $</h3>
                 <Month />
                 <h2><u>February</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
-                    <h3>Monthly expenses: $</h3>
                 <Month />
                 <h2><u>March</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
-                    <h3>Monthly expenses: $</h3>
                 <Month />
                 <h2><u>April</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
-                    <h3>Monthly expenses: $</h3>
                 <Month />
                 <h2><u>May</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
-                    <h3>Monthly expenses: $</h3>
                 <Month />
                 <h2><u>June</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
-                    <h3>Monthly expenses: $</h3>
                 <Month />
                 <h2><u>July</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
-                    <h3>Monthly expenses: $</h3>
                 <Month />
                 <h2><u>August</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
-                    <h3>Monthly expenses: $</h3>
                 <Month />
                 <h2><u>September</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
-                    <h3>Monthly expenses: $</h3>
                 <Month />
                 <h2><u>October</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
@@ -85,7 +76,6 @@ const Year = () => {
                 <Month />
                 <h2><u>December</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
-                    <h3>Monthly expenses: $</h3>
                 <Month />
             </div>
         </div>

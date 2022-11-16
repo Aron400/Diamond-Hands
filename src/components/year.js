@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Month from './month';
 import { connect } from "react-redux";
 import { useSelector, useDispatch } from "react-redux";
@@ -9,8 +9,26 @@ const Year = () => {
 
     const dispatch = useDispatch();
 
+    const [yearlyStatus, setYearlyStatus] = useState();
+
+    
+    
+    function emojiYear(budget, expenses) {
+        console.log('emojiYear', budget, expenses)
+        if (budget >= expenses) {
+            setYearlyStatus('😁💸')
+        } else {
+            setYearlyStatus('☹️📉')
+        }
+    }
+
     let yearlyBudget = useSelector(state => state.budget);
     let yearlyExpenses = useSelector(state => state.expenses);
+    console.log(yearlyExpenses)
+
+    useEffect(() => {
+        emojiYear(yearlyBudget, yearlyExpenses)
+    }, [yearlyExpenses]);
 
     let monthlyBudget = yearlyBudget/12;
     let enteredBudget;
@@ -39,6 +57,7 @@ const Year = () => {
             <div className='year-inner'>
                 <h2>Yearly budget: ${yearlyBudget}</h2>
                 <h2>Yearly expenses: ${yearlyExpenses}</h2>
+                <h2>Yearly Status: {yearlyStatus}</h2>
                 <h2><u>January</u></h2>
                     <h3>Monthly budget: ${monthlyBudget.toFixed(2)}</h3>
                 <Month />

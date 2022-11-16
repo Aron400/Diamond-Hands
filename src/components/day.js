@@ -3,35 +3,45 @@ import { useSelector, useDispatch } from "react-redux";
 import { addExpense } from '../redux/actions/actions';
 import Month from './month';
 
-const Day = () => {
+const Day = (props) => {
     const [dailyExpense, setDailyExpense] = useState(0);
     const [dailyStatus, setDailyStatus] = useState();
 
     const dispatch = useDispatch();
 
-    // function combo() {
-    //     dispatch(addExpense(enteredExpense));
-    //     setDailyExpense(parseInt(dailyExpense) + parseInt(enteredExpense));
-    //     emoji(dailyBudget, dailyExpense);
-        
-    // }
+    const dayNumber = 1;
 
     function combo() {
-        setTimeout(function () {
-            emoji(dailyBudget, dailyExpense);
-        },2000)
+        console.log(enteredExpense)
         dispatch(addExpense(enteredExpense));
-        setDailyExpense(parseInt(dailyExpense) + parseInt(enteredExpense));
+        let addedDay = parseInt(dailyExpense) + parseInt(enteredExpense);
+        let addedMonth = parseInt(props.monthlyExpenses) + parseInt(enteredExpense);
+        props.setMonthlyExpenses(addedMonth);
+
+        setDailyExpense(addedDay);
+        emojiDay(dailyBudget, addedDay);
+        emojiMonth(monthlyBudget, addedMonth);
+        
+       
         
         
     }
 
-     function emoji(budget, expenses) {
-        console.log('emoji')
+     function emojiDay(budget, expenses) {
+        //console.log('emoji', budget, expenses)
         if (budget >= expenses) {
-            setDailyStatus('😁')
+            setDailyStatus('😁💸')
         } else {
-            setDailyStatus('☹️')
+            setDailyStatus('☹️📉')
+        }
+    }
+
+    function emojiMonth(budget, expenses) {
+        console.log('emoji', budget, expenses)
+        if (budget >= expenses) {
+            props.setMonthlyStatus('😁💸')
+        } else {
+            props.setMonthlyStatus('☹️📉')
         }
     }
 
@@ -47,7 +57,7 @@ const Day = () => {
 
     return (
         <div className='day'>
-            <div className='inner'>day</div>
+            <div className='inner'>{dayNumber}</div>
             <div className='inner'>Budget: {dailyBudget.toFixed(2)}</div>
             <div className="inner">Spent: {dailyExpense}</div>
             <div className='inner'>Status: {dailyStatus}</div>
@@ -66,8 +76,9 @@ const Day = () => {
                         placeholder="description"   
                     />
                 </div>
-                <button type='button' onClick={combo}
-                >Add expense</button>
+                <button type='button' onClick={combo }>Add expense</button>
+                
+
             </form>
             
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { addExpense } from '../redux/actions/actions';
 import Month from './month';
@@ -10,8 +10,10 @@ const Day = (props) => {
     const dispatch = useDispatch();
 
     const dayNumber = 1;
+    const firstRef = useRef(null);
+    const lastRef = useRef(null);
 
-    function combo() {
+    function combo(e) {
         console.log(enteredExpense)
         dispatch(addExpense(enteredExpense));
         let addedDay = parseInt(dailyExpense) + parseInt(enteredExpense);
@@ -22,9 +24,8 @@ const Day = (props) => {
         emojiDay(dailyBudget, addedDay);
         emojiMonth(monthlyBudget, addedMonth);
         
-       
-        
-        
+        firstRef.current.value = '';
+        lastRef.current.value = '';
     }
 
      function emojiDay(budget, expenses) {
@@ -64,6 +65,7 @@ const Day = (props) => {
             <form className='expense'>
                 <div className="field">
                     <input 
+                        ref={firstRef}
                         type="integer" 
                         name="expense" 
                         placeholder="0"
@@ -71,6 +73,7 @@ const Day = (props) => {
                         onChange={ (e) => updateExpense(e) }  
                     />
                     <input 
+                        ref={lastRef}
                         type="text" 
                         name="expense-description" 
                         placeholder="description"   

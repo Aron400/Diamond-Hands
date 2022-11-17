@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Month from './month';
 import { connect } from "react-redux";
 import { useSelector, useDispatch } from "react-redux";
@@ -8,13 +8,10 @@ import { setBudget, addExpense } from '../redux/actions/actions';
 const Year = () => {
 
     const dispatch = useDispatch();
-
+    const firstRef = useRef(null);
     const [yearlyStatus, setYearlyStatus] = useState();
-
-    
     
     function emojiYear(budget, expenses) {
-        console.log('emojiYear', budget, expenses)
         if (budget >= expenses) {
             setYearlyStatus('😁💸')
         } else {
@@ -36,22 +33,27 @@ const Year = () => {
     let updateBudget = (evt) => {
         enteredBudget = evt.target.value;
     };
+    
+    function combo() {
+        //() => dispatch(setBudget(enteredBudget));
+        firstRef.current.value = '';
+    }
 
-    console.log(yearlyBudget);
     return (
         <div className='year'>
             <form className='year-budget-form'>
                 <div className="field">
                     <label>Enter Yearly Budget</label>
                         <input 
+                            ref={firstRef}
                             type="integer" 
                             name="budget" 
-                            placeholder="1000"
+                            placeholder="0"
                             value={enteredBudget}
                             onChange={ (e) => updateBudget(e) }
                              
                         />
-                        <button type="button" onClick={() => dispatch(setBudget(enteredBudget))}>Enter</button>
+                        <button type="button" onClick={() => { dispatch(setBudget(enteredBudget)); combo()}}>Enter</button>
                 </div>
             </form>
             <div className='year-inner'>

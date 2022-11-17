@@ -58,9 +58,9 @@ const Day = (props) => {
 
     return (
         <div className='day'>
-            <div className='inner'>{props.value}</div>
-            <div className='inner'>Budget: <u>{dailyBudget.toFixed(2)}</u></div>
-            <div className="inner">Spent: <u>{dailyExpense}</u></div>
+            <div className='inner'>{props.value}💎</div>
+            <div className='inner'>Budget: ${dailyBudget.toFixed(2)}</div>
+            <div className="inner">Spent: ${dailyExpense}</div>
             <div className='inner'>Status: {dailyStatus}</div>
             <form className='expense'>
                 <div className="field">

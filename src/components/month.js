@@ -17,46 +17,46 @@ const Month = () => {
             <h3>Monthly Status: {monthlyStatus}</h3>
             
             <div className='week'>
-                <Day dayNumber={1} setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
-                <Day dayNumber={2} setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
-                <Day dayNumber={3} setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
-            </div>
-            {/* <div className='week'>
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
+                <Day value='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='2' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='3' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='4' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='5' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='6' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='7' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
             </div>
             <div className='week'>
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
+                <Day value='8' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='9' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='10' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='11' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='12' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='13' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='14' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
             </div>
             <div className='week'>
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
+                <Day value='15' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='16' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='17' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='18' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='19' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='20' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='21' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
             </div>
             <div className='week'>
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-                <Day className='1' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} />
-            </div> */}
+                <Day value='22' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='23' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='24' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='25' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='26' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='27' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='28' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+            </div>
+            <div className='week'>
+                <Day value='29' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='30' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+                <Day value='31' setMonthlyExpenses={setMonthlyExpenses} monthlyExpenses={monthlyExpenses} setMonthlyStatus={setMonthlyStatus} />
+           </div>
         </div>
     );
 };

@@ -1,25 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
+import Home from './pages/Home';
+import Login from './pages/Login';
 import Year from './components/year';
 import Header from './components/header';
 import {createStore} from 'redux';
 import { budgetReducer } from './redux/reducers/budgetReducer';
 import { Provider } from 'react-redux';
 
-const store = createStore(budgetReducer);
-
-store.subscribe(() => console.log(store.getState()));
-// store.dispatch({ type: "SET_BUDGET" });
-// store.dispatch({ type: "ADD_EXPENSE" });
-
 function App() {
   return (
-    <Provider store={store}>
-      <div className="App">
-        <Header />
-        <Year />
-      </div>
-    </Provider>
+    <div className="app">
+			<Router>
+				<Routes>
+					<Route path="/" exact element={<Home />} />
+          <Route path="/login" element={<Login />} />
+				</Routes>
+			</Router>
+		</div>
   );
 }
 
